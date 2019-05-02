@@ -20,7 +20,7 @@ public class Movie {
         priceCode = arg;
     }
     
-    public String getTitle (){
+    public String getTitle () {
         return title;
     }
 }
