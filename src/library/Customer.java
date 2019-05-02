@@ -9,15 +9,15 @@ class Customer {
     
     public Customer (String newname){
         name = newname;
-    };
+    }
     
     public void addRental(Rental arg) {
         rentals.addElement(arg);
-    };
+    }
     
     public String getName (){
         return name;
-    };
+    }
     
     public String statement() {
         double totalAmount = 0;
