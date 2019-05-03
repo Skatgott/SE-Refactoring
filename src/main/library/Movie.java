@@ -1,4 +1,4 @@
-package library;
+package main.library;
 
 public class Movie {
     public static final int CHILDRENS = 2;

@@ -1,9 +1,9 @@
-package library;
+package main.library;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Customer {
+public class Customer {
     private String name;
     private List<Rental> rentals = new ArrayList<>();
     
@@ -45,7 +45,7 @@ class Customer {
         return result;
     }
 
-    private double amountFor(Rental each) {
+    public double amountFor(Rental each) {
         double thisAmount = 0;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:

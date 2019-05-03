@@ -1,6 +1,6 @@
-package library;
+package main.library;
 
-class Rental {
+public class Rental {
     private Movie movie;
     private int daysRented;
 
