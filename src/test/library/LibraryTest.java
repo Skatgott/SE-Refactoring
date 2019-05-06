@@ -4,15 +4,18 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import main.library.ChildrensMovie;
 import main.library.Customer;
 import main.library.Movie;
+import main.library.NewReleaseMovie;
+import main.library.RegularMovie;
 import main.library.Rental;
 
 public class LibraryTest {
 
 	@Test
 	public void shouldCalculatePriceFor2DaysRentalOfRegularMovie() {
-		Movie movie = new Movie("Zur allgemeinen Belustigung", Movie.REGULAR);
+		Movie movie = new RegularMovie("Zur allgemeinen Belustigung");
 		Rental rentalRegular = new Rental(movie, 2);
 		Customer me = new Customer("Meine Wenigkeit");
 		
@@ -21,7 +24,7 @@ public class LibraryTest {
 
 	@Test
 	public void shouldCalculatePriceFor3DaysRentalOfRegularMovie() {
-		Movie movie = new Movie("Zur allgemeinen Belustigung", Movie.REGULAR);
+		Movie movie = new RegularMovie("Zur allgemeinen Belustigung");
 		Rental rentalRegular = new Rental(movie, 3);
 		Customer me = new Customer("Meine Wenigkeit");
 		
@@ -30,7 +33,7 @@ public class LibraryTest {
 
 	@Test
 	public void shouldCalculatePriceFor5DaysRentalOfNewMovie() {
-		Movie movie = new Movie("Zur allgemeinen neuen Belustigung", Movie.NEW_RELEASE);
+		Movie movie = new NewReleaseMovie("Zur allgemeinen neuen Belustigung");
 		Rental rentalRegular = new Rental(movie, 5);
 		Customer me = new Customer("Meine Wenigkeit");
 		
@@ -39,7 +42,7 @@ public class LibraryTest {
 
 	@Test
 	public void shouldCalculatePriceFor3DaysRentalOfChildrensMovie() {
-		Movie movie = new Movie("Zur allgemeinen Kinderbespaﬂung", Movie.CHILDRENS);
+		Movie movie = new ChildrensMovie("Zur allgemeinen Kinderbespaﬂung");
 		Rental rentalRegular = new Rental(movie, 3);
 		Customer me = new Customer("Meine Wenigkeit");
 		
@@ -48,7 +51,7 @@ public class LibraryTest {
 
 	@Test
 	public void shouldCalculatePriceFor4DaysRentalOfChildrensMovie() {
-		Movie movie = new Movie("Zur allgemeinen Kinderbespaﬂung", Movie.CHILDRENS);
+		Movie movie = new ChildrensMovie("Zur allgemeinen Kinderbespaﬂung");
 		Rental rentalRegular = new Rental(movie, 4);
 		Customer me = new Customer("Meine Wenigkeit");
 		
