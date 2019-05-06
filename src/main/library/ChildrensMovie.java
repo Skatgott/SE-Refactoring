@@ -11,6 +11,6 @@ public class ChildrensMovie extends Movie {
         double amount = 1.5;
         if (days > 3)
             amount += (days - 3) * 1.5;
-        return 0;
+        return amount;
 	}
 }
