@@ -23,4 +23,6 @@ public abstract class Movie {
     public String getTitle () {
         return title;
     }
+    
+    public abstract double getRentalPrice(int days);
 }
